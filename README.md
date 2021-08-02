@@ -1,15 +1,9 @@
 # Neural Network-Coursework (Matlab)
 - https://github.com/iamshirdi/Neural-Networks-Coursework
-  - ## Labs
-  - Back Propogation Multilayer perceptron
-  - Associative Networks
-  - Prinicipal Component Analysis (PCA)
-  - Independent Component Analysis (ICA)
-  - Radial Basis Function Networksv(RBFN) and Genetic Algorithms
 
-  - ## Report
-  - Hopfield-Boltzmann Machine
-  - ICA Image Seperation
-  - PCA 
-  - Multilayer perceptron Neural Network
-  - RBFN
+# AWS Machine Learning Scholarship Program
+- https://github.com/iamshirdi/AI/tree/main/AWS%20Machine%20Learning
+
+
+<img src = "AWS Machine Learning/static/AWS_Machine_Learning_Scholarship_Winner_Badge.PNG" width =400px height=400px  alt ="AWS Scholarship Badge" title ="AWS Scholarship Badge">
+
