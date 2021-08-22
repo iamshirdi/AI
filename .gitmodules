@@ -1,3 +1,6 @@
 [submodule "Neural-Networks-Coursework"]
 	path = Neural-Networks-Coursework
 	url = https://github.com/iamshirdi/Neural-Networks-Coursework.git
+[submodule "AWS Machine Learning/aws-deepcomposer-samples"]
+	path = AWS Machine Learning/aws-deepcomposer-samples
+	url = https://github.com/aws-samples/aws-deepcomposer-samples.git
