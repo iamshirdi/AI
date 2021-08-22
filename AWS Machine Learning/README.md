@@ -2,7 +2,7 @@
 <img src = "./static/AWS_Machine_Learning_Scholarship_Winner_Badge.PNG" width =900px height=850px  alt ="AWS Scholarship Badge" title ="AWS Scholarship Badge">
 
 
-# About
+# Intro ML
 - AI is a technique to simulate human level intelligence
 - ML will learn automatically without explicit programming by inspecting data(unsupervised patterns supervised trained data) and reinforcement (maximize reward) 
 - In reinforcement learning, the algorithm figures out which actions to take in a situation to maximize a reward (in the form of a number) on the way to reaching a specific goal.
@@ -39,3 +39,13 @@ Neural Network model (also called a neural network) is composed of collections o
 - evaluation metrics like confusion matrix , silhouete Coefficient(how well data clustered)f1-score etc
 - accuracy:You realize the model will see the 'Does not contain spill' class almost all the time, so any model that just predicts “no spill” most of the time will seem pretty accurate.
 - precision as answering the question, "Of all predictions of a spill, how many were right?" and recall as answering the question, "Of all actual spills, how many did we detect?"
+
+# AWS ML
+<a href = "https://aws.amazon.com/machine-learning/ai-services/?utm_source=Udacity&utm_medium=Webpage&utm_campaign=Udacity%20AWS%20ML%20Foundations%20Course">
+<img src = "./static/AWS-ML-Services.PNG" title ="AWS ML Services types">
+</a>
+
+- Amazon sagemaker is a PAAS service to build,train and deploy machine learning models
+- computer vision recognises patterns(edges-rextures-high features-deep learning) to gain understanidng of image like different rules in different positions, conditions etc to detect image
+- CV applications-activity recognition, sorting, ocr, content filtering, parking, argument reality: photo apps , segmentation, recognise + where object is
+- 
