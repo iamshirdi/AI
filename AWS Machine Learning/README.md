@@ -5,7 +5,7 @@
 - AWS Deep Lens - Componst:sorting-classification
 - AWS Deep Racer - Reinforcement Learning (SAC and PPO)
 - AWS Deep Composer - Generative AI (ARCNN,GAN,Transformers)
-
+- Software Engineering Practices - (Refactoring Wine quality, optimizing common books, optimizing Holiday gifts, pytest, Logging, Code-Review)
 
 # Intro ML
 - AI is a technique to simulate human level intelligence
@@ -90,4 +90,42 @@ Use the transformers technique to extend your input track by up to 30 seconds.
 Discriminator loss: Evaluates how well the discriminator differentiates between real and fake data.
 - Autoregressive convolutional neural networks make iterative changes over time to create new data.. AR-CNN used to edit/correct music
 - Loss models stabilize helps that no more training can be done
-- 
+
+# Software Engineering Fundamentals
+- Clean(simple,readable,concise) and Modular Code. Abstracting improves readiblity of code
+- Modular code is logically broken up into functions and modules (file encapsulating code).
+- Refactoring/restructing after making the code work is best practice/speeds up/ maintain/reuse etc
+- meaningful descriptive names, DRY(dont repeat yourself using functions,modules), 
+- type in variable name,is_minor - paths of speech to represent,be descriptive but not many characters,implementation details are unnecessary to include in variable,fix the weight spaces - indentation, seperate code with blank lines
+- renaming like is_female and functions categorize_task instead of category better and variable as simply category etc
+-  the standard is to use four spaces for each indent.Try to limit your lines to around 79 characters, which is the guideline given in the PEP 8 style
+- each function should do only one thing .try to refactory and reduce reusability. otherwise more difficult to generalize
+- Efficiency in code : time and space tradeoff. when refactoring efficiency should also be improved
+- vector operations like numpy-pandas  instead of loops. know your data structures and which methods are faster 
+- Inline comments - line level #.
+Docstrings - module and function level  """ after function def""".
+Project documentation - project level such as Readme.md .
+- Refactoring argument instead of comments. Sometimes an unconventional or seemingly arbitrary approach may be applied because of some obscure external variable causing side effects. These things are difficult to explain with code.
+- doc string first line detailed explaination,args,returns
+- Project Documentation  should explain what it does, list its dependencies, and provide sufficiently detailed instructions on how to use it.
+- git log and check cross validation score  for given paramaters then checkout commit and merge to develop. git merge --no-ff friend_groups
+- Mlops require large dataset-model unlike devops. dvc: handles large dataset and model artifact. Data Version Control (DVC) is a Git extension that adds functionality for managing your code and data together.
+- It is the model metadata that can lead us to the real model object which is stored in backend storage. To prevent from losing the metadata, it should be added to version control using git.
+- Testing in datascience is b ad encoding,inappropriate,unepxceted features are not easily detectable
+- Test Driven development is writing tests before developing code to implement tasks
+- Unit test: A type of test that covers a “unit” of code—usually a single function—independently from the rest of the program. Larger Programs we use integration tests as well
+- pytest the functions start with test_ and functions test_ then assert
+- Enter pytest into your terminal in the directory of your test file and it detects these tests for you. Will stop only if errors not failed asserts
+- Test driven development helps if we succeded in finishing task though initially fails
+- Tests also helps ensure that your function behavior is repeatable, regardless of external parameters such as hardware and time.
+- Logging is valuable for understanding the events that occur while running your program.especially you cant monitor everything real time
+- Debug: Use this level for anything that happens in the program. 
+Error: Use this level to record any error that occurs. 
+Info: Use this level to record all actions that are user driven or system specific, such as regularly scheduled operations.
+- Code Review helps catch erors,readability,standards are met, share knowledege on teams (code style exisitng check etc)
+- comments should be like Understand your thought process while reviewing.
+- Keep your comments objective like avoiding I and you . Provide code examples
+<img src = "./static/code-review.PNG" title ="Code Review Basic Questions">
+
+
+
