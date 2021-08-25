@@ -4,6 +4,3 @@
 [submodule "AWS Machine Learning/aws-deepcomposer-samples"]
 	path = AWS Machine Learning/aws-deepcomposer-samples
 	url = https://github.com/aws-samples/aws-deepcomposer-samples.git
-[submodule "AWS Machine Learning/DSND_Term2"]
-	path = AWS Machine Learning/DSND_Term2
-	url = https://github.com/udacity/DSND_Term2.git
