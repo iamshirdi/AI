@@ -6,6 +6,7 @@
 - AWS Deep Racer - Reinforcement Learning (SAC and PPO)
 - AWS Deep Composer - Generative AI (ARCNN,GAN,Transformers)
 - Software Engineering Practices - (Refactoring Wine quality, optimizing common books, optimizing Holiday gifts, pytest, Logging, Code-Review)
+- Object Oriented Programming (Gaussian Static Modular Package build, upload pipi)
 
 # Intro ML
 - AI is a technique to simulate human level intelligence
@@ -127,5 +128,41 @@ Info: Use this level to record all actions that are user driven or system specif
 - Keep your comments objective like avoiding I and you . Provide code examples
 <img src = "./static/code-review.PNG" title ="Code Review Basic Questions">
 
+# Object Oriented Programming
+- Hides implementation, allows to create large modular programs
+- Procedural Programming executes instructions one at a time
+- Object oriented programming focuses on each of characterstics of object(an instance of class) and actions of object.  A characteristic (**attributes**) corresponds to a noun and an action(**methods**) corresponds to a verb.
+- method is inside of a class whereas a function is outside of a class.
+- Blueprint - **CLASS** which has same generic method,attributes
+<img src = "./static/object-oriented-programming.PNG" title ="object-oriented-programming">
+
+- Encapsulation: One of the fundamental ideas behind object-oriented programming is called encapsulation: you can combine functions and data all into a single entity. In object-oriented programming, this single entity is called a class
+- Camel case for class name is good practice
+- __init__ is used to initialize,create specific object. self is like dictionary which holds all of the values
+- Note the return and non return for a particular method. Can access using '.' syntax
+```
+class Shirt:
+
+    def __init__(self, shirt_color, shirt_size, shirt_style, shirt_price):
+        self.color = shirt_color
+        self.size = shirt_size
+        self.style = shirt_style
+        self.price = shirt_price
+    
+    def change_price(self, new_price):
+    
+        self.price = new_price
+        
+    def discount(self, discount):
+
+        return self.price * (1 - discount)
+```
+
+- **Self** tells (differentiates between two instance objects of class) Python where to look in the computer's memory for the shirt_one object
+- The word self (implicit) is just a convention. You could actually use any other name as long as you are consisten, but you should use self to avoid confusing people.
+- Python does not have an option to change values attributes directly unlike c++ etc (protected).  price could be explicitly labeled as a **private variable**. This would prohibit an object from accessing the price attribute directly like shirt_one._price = 15.
+- the general object-oriented programming convention  is to use **Methods** use to change values for example dollars to euros. Multiply by a factor instead of manually entering. These methods are called set and get methods or setter and getter methods
+-Binomial Distrivution: A fair coin has a probability of a positive outcome (heads) p = 0.5. If you flip a coin 20 times, the mean would be 20 * 0.5 = 10; you'd expect to get 10 heads.  the standard deviation is the square root of the variance. probability density function
+- 
 
 
