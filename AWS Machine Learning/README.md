@@ -163,6 +163,95 @@ class Shirt:
 - Python does not have an option to change values attributes directly unlike c++ etc (protected).  price could be explicitly labeled as a **private variable**. This would prohibit an object from accessing the price attribute directly like shirt_one._price = 15.
 - the general object-oriented programming convention  is to use **Methods** use to change values for example dollars to euros. Multiply by a factor instead of manually entering. These methods are called set and get methods or setter and getter methods
 -Binomial Distrivution: A fair coin has a probability of a positive outcome (heads) p = 0.5. If you flip a coin 20 times, the mean would be 20 * 0.5 = 10; you'd expect to get 10 heads.  the standard deviation is the square root of the variance. probability density function
-- 
+- gaus_a+gaus_b two objects can be added using magic methods which overwrites default behaviour
+- **magic methods** are __init__ overwrites the behaviour of initating variables. similarly to add two objeccts __add__ magic method is used
+- __repr__ method is used similar to variable for represing characterstics of the instance here it is gaussian
+- Inheritance to add methods and attriutes to existing class. In general, inheritance makes code easier to maintain since you can update a parent class once rather than updating all of the children.
 
+```
+class Clothing:
+
+    def __init__(self, color, size, style, price):
+        self.color = color
+        self.size = size
+        self.style = style
+        self.price = price
+        
+    def change_price(self, price):
+        self.price = price
+        
+    def calculate_discount(self, discount):
+        return self.price * (1 - discount)
+        
+class Shirt(Clothing):
+
+    def __init__(self, color, size, style, price, long_or_short):
+        Clothing.__init__(self, color, size, style, price)
+        self.long_or_short = long_or_short
+    
+    def change_price(self):
+        self.price = 2*self.price
+```
+
+- from Generaldistribution import Distribution : a modularised code example
+- Decorators are a short-hand way to use functions inside other functions.
+- @classmethod  uses the same __init__ constructor internally and simply provide a shortcut for remembering all of the various ingredients.
+
+```
+class Pizza:
+    def __init__(self, ingredients):
+        self.ingredients = ingredients
+
+    def __repr__(self):
+        return f'Pizza({self.ingredients!r})'
+
+    @classmethod
+    def margherita(cls):
+        return cls(['mozzarella', 'tomatoes'])
+
+    @staticmethod
+    def circle_area(r):
+        return r ** 2 * math.pi
+```
+
+- Static methods don’t have access to cls or self. They work like regular functions but belong to the class’s namespace.
+- pip install . for local installation
+- A package needs to have __init__.py file. The init file tells its a package. It runs whenver a apckage is imported. Example in init file we can have from .Gaussiandistribution import Gaussian
+- setup.py one level above package folder is necessary for pip installing. Contains metadata
+- so after installing we can simply say from distributions import Gaussian due to import otherwise from distrubitions.Gaussiandistribution import Gaussian
+- import distributions then distributions.__file__ will tell where the package is installed
+<img src = "./static/pip-packages.PNG"
+
+- A virtual environment is a silo-ed Python installation apart from your main Python installation. That way you can install packages and delete the virtual environment without affecting your main Python installation.
+- Object-oriented programs are relatively easy to expand, especially because of inheritance.
+- Object-oriented programs obscure functionality from the user. Consider scipy packages. You don't need to know how the actual code works in order to use its classes and methods.
+- conda and venv are some of virtual environment packages
+- If you create a conda environment, activate the environment, and then pip install the distributions package, you'll find that the system installs your package globally rather than in your local conda environment. However, if you create the conda environment and install pip simultaneously, you'll find that pip behaves as expected when installing packages into your local environment:
+- python3 -m virtualenv env which creates env folder 
+- **source env/bin/activate** to activate environment if you install pip then it will install in that folder,env
+- pip install --upgrade . will reinstall package locally
+- tests folder in package is important for testing package
+- _decision function indicates that it should be used internally within class not by an instantiated object
+- pypy is where packages are stored. try test pypy to test
+-  license.txt, readme.md and setup.cfg: name of the readme-file is needed for pypy
+- zip_safe = false in setup.py indicates cant run directly using zip file
+- python setup.py sdist inside package folder to get tar.gz to upload and pip install twine
+- twine upload --repository-url test.pypi.org/legacy DIR (where tar.gz located)
+
+```
+cd binomial_package_files
+python setup.py sdist
+pip install twine
+
+# commands to upload to the pypi test repository
+twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+pip install --index-url https://test.pypi.org/simple/ dsnd-probability
+
+# command to upload to the pypi repository
+twine upload dist/*
+pip install dsnd-probability
+```
+- python3 setup.py sdist bdist_wheel
+This command still outputs a folder called dist. The difference is that you will get both a .tar.gz file and a .whl file. The .tar.gz file is called a source archive, whereas the .whl file is a built distribution. The .whl file is a newer type of installation file for Python packages. When you pip install a package, pip firsts look for a .whl file (wheel file); if there isn't one, it looks for the .tar.gz file.
+- A .tar.gz file (an sdist) contains the files needed to compile and install a Python package. A .whl file (a built distribution) only needs to be copied to the proper place for installation. Behind the scenes, pipinstalling a .whl file has fewer steps than installing a .tar.gz file.
 
